@@ -5,7 +5,7 @@ namespace Ev_tapsirigi_ORM3
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args)//dsd
         {
             var ctr=new CategoryRepo();
             var category = new Category() { Name = "Elektronika"};
