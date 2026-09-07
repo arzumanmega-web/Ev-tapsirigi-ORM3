@@ -75,14 +75,22 @@ namespace Ev_tapsirigi_ORM3.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+<<<<<<< HEAD
                     b.Property<int?>("CustomerId")
+=======
+                    b.Property<int>("CustomerId")
+>>>>>>> 7a11ef8b01370e9921aaa3916126769e16030431
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CustomerId")
+<<<<<<< HEAD
                         .IsUnique()
                         .HasFilter("[CustomerId] IS NOT NULL");
+=======
+                        .IsUnique();
+>>>>>>> 7a11ef8b01370e9921aaa3916126769e16030431
 
                     b.ToTable("CustomerAdress");
                 });
@@ -95,7 +103,11 @@ namespace Ev_tapsirigi_ORM3.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+<<<<<<< HEAD
                     b.Property<int?>("CustomerId")
+=======
+                    b.Property<int>("CustomerId")
+>>>>>>> 7a11ef8b01370e9921aaa3916126769e16030431
                         .HasColumnType("int");
 
                     b.Property<DateTime>("OrderDate")
@@ -116,7 +128,11 @@ namespace Ev_tapsirigi_ORM3.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+<<<<<<< HEAD
                     b.Property<int?>("CategoryId")
+=======
+                    b.Property<int>("CategoryId")
+>>>>>>> 7a11ef8b01370e9921aaa3916126769e16030431
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -155,7 +171,13 @@ namespace Ev_tapsirigi_ORM3.Migrations
                 {
                     b.HasOne("Ev_tapsirigi_ORM3.Table.Customer", "Customer")
                         .WithOne("CustomerAdress")
+<<<<<<< HEAD
                         .HasForeignKey("Ev_tapsirigi_ORM3.Table.CustomerAdress", "CustomerId");
+=======
+                        .HasForeignKey("Ev_tapsirigi_ORM3.Table.CustomerAdress", "CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+>>>>>>> 7a11ef8b01370e9921aaa3916126769e16030431
 
                     b.Navigation("Customer");
                 });
@@ -164,7 +186,13 @@ namespace Ev_tapsirigi_ORM3.Migrations
                 {
                     b.HasOne("Ev_tapsirigi_ORM3.Table.Customer", "Customer")
                         .WithMany("Orders")
+<<<<<<< HEAD
                         .HasForeignKey("CustomerId");
+=======
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+>>>>>>> 7a11ef8b01370e9921aaa3916126769e16030431
 
                     b.Navigation("Customer");
                 });
@@ -173,7 +201,13 @@ namespace Ev_tapsirigi_ORM3.Migrations
                 {
                     b.HasOne("Ev_tapsirigi_ORM3.Table.Category", "Category")
                         .WithMany("Products")
+<<<<<<< HEAD
                         .HasForeignKey("CategoryId");
+=======
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+>>>>>>> 7a11ef8b01370e9921aaa3916126769e16030431
 
                     b.Navigation("Category");
                 });
@@ -200,7 +234,12 @@ namespace Ev_tapsirigi_ORM3.Migrations
 
             modelBuilder.Entity("Ev_tapsirigi_ORM3.Table.Customer", b =>
                 {
+<<<<<<< HEAD
                     b.Navigation("CustomerAdress");
+=======
+                    b.Navigation("CustomerAdress")
+                        .IsRequired();
+>>>>>>> 7a11ef8b01370e9921aaa3916126769e16030431
 
                     b.Navigation("Orders");
                 });

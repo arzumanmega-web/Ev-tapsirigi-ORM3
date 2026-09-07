@@ -8,11 +8,19 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Ev_tapsirigi_ORM3.Table
 {
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 7a11ef8b01370e9921aaa3916126769e16030431
     public class Product
     {
         public Product()
         {
+<<<<<<< HEAD
+=======
+            Category=new Category();
+>>>>>>> 7a11ef8b01370e9921aaa3916126769e16030431
             Orders = new List<Order>();
         }
 
@@ -20,6 +28,7 @@ namespace Ev_tapsirigi_ORM3.Table
         [MaxLength(50)]
         public string? Name { get; set; }
         public double Price { get; set; }
+<<<<<<< HEAD
         public int? CategoryId { get; set; }
         public virtual Category? Category { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
@@ -27,3 +36,12 @@ namespace Ev_tapsirigi_ORM3.Table
 
 
 }
+=======
+        public int CategoryId { get; set; }
+        public virtual Category Category { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
+    }
+
+    
+}
+>>>>>>> 7a11ef8b01370e9921aaa3916126769e16030431

@@ -19,4 +19,8 @@ namespace Ev_tapsirigi_ORM3.Table
         public string? Name { get; set; }
         public virtual ICollection<Product> Products { get; set; }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7a11ef8b01370e9921aaa3916126769e16030431

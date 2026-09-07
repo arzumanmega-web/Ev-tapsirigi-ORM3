@@ -16,17 +16,30 @@ namespace Ev_tapsirigi_ORM3.Repository
 
         public CategoryRepo()
         {
+<<<<<<< HEAD
             _context = new E_commerceContextDb();
         }
         public void Add(Category obj)
         {
             _context.Add(obj);
             
+=======
+            _context=new E_commerceContextDb();
+        }
+        public Category Add(Category obj)
+        {
+            var add_obj = _context.Categories?.Add(obj);
+            return add_obj.Entity;
+>>>>>>> 7a11ef8b01370e9921aaa3916126769e16030431
         }
 
         public bool Delete(Category obj)
         {
+<<<<<<< HEAD
             return _context.Categories?.Remove(obj) != null;
+=======
+            return _context.Categories?.Remove(obj) !=null;
+>>>>>>> 7a11ef8b01370e9921aaa3916126769e16030431
 
         }
 
@@ -37,7 +50,11 @@ namespace Ev_tapsirigi_ORM3.Repository
 
         public Category? Get(int id)
         {
+<<<<<<< HEAD
             return _context.Categories?.SingleOrDefault(i => i.Id == id);
+=======
+            return _context.Categories?.SingleOrDefault(i=>i.Id==id);
+>>>>>>> 7a11ef8b01370e9921aaa3916126769e16030431
         }
 
         public IEnumerable<Category> GetAll()
@@ -55,6 +72,7 @@ namespace Ev_tapsirigi_ORM3.Repository
             return _context.SaveChanges() > 0;
         }
 
+<<<<<<< HEAD
         public void Update(Category obj)
         {
             _context.Categories?.Update(obj);
@@ -62,3 +80,12 @@ namespace Ev_tapsirigi_ORM3.Repository
         }
     }
 }
+=======
+        public Category Update(Category obj)
+        {
+            var add_obj= _context.Categories.Update(obj);
+            return add_obj.Entity;
+        }
+    }
+}
+>>>>>>> 7a11ef8b01370e9921aaa3916126769e16030431

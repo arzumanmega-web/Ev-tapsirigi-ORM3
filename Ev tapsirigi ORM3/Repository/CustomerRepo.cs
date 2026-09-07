@@ -18,10 +18,17 @@ namespace Ev_tapsirigi_ORM3.Repository
         {
             _context = new E_commerceContextDb();
         }
+<<<<<<< HEAD
         public void Add(Customer obj)
         {
             _context.Add(obj);
             
+=======
+        public Customer Add(Customer obj)
+        {
+            var add_obj = _context.Customers?.Add(obj);
+            return add_obj.Entity;
+>>>>>>> 7a11ef8b01370e9921aaa3916126769e16030431
         }
 
         public bool Delete(Customer obj)
@@ -55,6 +62,7 @@ namespace Ev_tapsirigi_ORM3.Repository
             return _context.SaveChanges() > 0;
         }
 
+<<<<<<< HEAD
         public void Update(Customer obj)
         {
             _context.Customers?.Update(obj);
@@ -64,3 +72,12 @@ namespace Ev_tapsirigi_ORM3.Repository
         
     }
 }
+=======
+        public Customer Update(Customer obj)
+        {
+            var add_obj = _context.Customers.Update(obj);
+            return add_obj.Entity;
+        }
+    }
+}
+>>>>>>> 7a11ef8b01370e9921aaa3916126769e16030431

@@ -11,6 +11,7 @@ namespace Ev_tapsirigi_ORM3.Table
     {
         public CustomerAdress()
         {
+<<<<<<< HEAD
             
         }
 
@@ -22,3 +23,16 @@ namespace Ev_tapsirigi_ORM3.Table
         public virtual Customer? Customer { get; set; }
     }
 }
+=======
+            Customer=new Customer();
+        }
+
+        public int Id { get; set; }
+        public int CustomerId { get; set; }
+        public string? Adress { get; set; }
+        [MaxLength(50)]
+        public string? City { get; set; }
+        public virtual Customer Customer { get; set; }
+    }
+}
+>>>>>>> 7a11ef8b01370e9921aaa3916126769e16030431
